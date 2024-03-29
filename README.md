@@ -30,3 +30,14 @@
 - **Container Runtime**: The container runtime is the software that is responsible for running containers. Kubernetes supports several container runtimes: Docker, containerd, CRI-O, and any implementation of the Kubernetes CRI (Container Runtime Interface).
 
 - **Kubelet**: An agent that runs on each node in the cluster. It makes sure that containers are running in a pod.
+
+### Master Node vs Worker Node
+
+![alt text](image.png)
+
+### kubectl
+
+- `kubectl` is a command line interface for running commands against Kubernetes clusters.
+- `kubectl` is used to deploy applications, inspect and manage cluster resources, and view logs.
+
+## Docker vs Containerd
