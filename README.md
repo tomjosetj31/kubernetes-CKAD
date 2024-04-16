@@ -41,3 +41,10 @@
 - `kubectl` is used to deploy applications, inspect and manage cluster resources, and view logs.
 
 ## Docker vs Containerd
+
+Container Runtime Interface (CRI) is a plugin interface which enables kubelet to use a wide variety of container runtimes, without the need to recompile. CRI allowed any vendor to work as a container runtime for Kubernetes as long as they adhere to OCI standards.
+OCI (Open Container Initiative) consist of an image spec and runtimespec. The image spec defines the format of the container image, while the runtime spec defines the format of the runtime bundle.
+
+- **Docker**: Docker is a platform for developing, shipping, and running applications in containers. Docker is a container runtime that uses containerd to manage container lifecycle.
+
+- **Containerd**: Containerd is an industry-standard core container runtime. It is available as a daemon for Linux and Windows, which can manage the complete container lifecycle of its host system: image transfer and storage, container execution and supervision, and low-level storage and network attachments.
