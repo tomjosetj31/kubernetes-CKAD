@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp
+spec:
+  containers:
+    - name: webapp
+      image: nginx
+      ports:
+        - containerPort: 8080
+      readinessProbe:
+        httpGet:
+          path: /api/ready
+          port: 8080
+
+        # for tcp
+        # tcpSocket:
+          # port: 3306
+        
+        # for exec
+        # exec:
+          # command:
+            # - cat
+            # - /app/is_ready
+
+        # if the pod take aditional time to start
+        initialDelaySeconds: 5
+        periodSeconds: 5
+        failureThreshold: 8
