@@ -1,0 +1,27 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: reporting-cron-job
+spec: 
+  schedule: "*/1 * * * *" # every minute
+  jobTemplate:
+    spec:
+      completions: 3
+      parallelism: 3
+      template:
+        spec:
+          containers:
+            - name: math-add-job
+              image: ubuntu
+              command: ["expr", "3", "+", "2"]
+          restartPolicy: Never
+
+
+
+
+# *****
+# 1- minutes
+# 2- hours
+# 3- day of month
+# 4- month
+# 5- day of week (0-6) (Sunday=0) (7 is also Sunday on some systems)
