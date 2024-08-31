@@ -1,0 +1,8 @@
+apiVersion: flights.com/v1
+kind: FlightTicket
+metadata:
+  name: my-flight-ticket
+spec:
+  from: Mumbai
+  to: New York
+  number: 1
