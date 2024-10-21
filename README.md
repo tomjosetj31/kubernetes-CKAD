@@ -1,4 +1,4 @@
-# Certified Kubernetes Administrator (CKA) Exam Preparation
+# Certified Kubernetes Application Developer (CKAD) Exam Preparation
 
 ## Core Concepts
 
